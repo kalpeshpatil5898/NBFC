@@ -1,0 +1,492 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins';
+
+}
+
+:root{
+    --primary-color: #00d000;
+    --dark-primary: #00aa00;
+    --light-primary: #00ff00;   
+    --bg-color: #00ff0009;
+    --fcolor-light: #f5f5f5;
+    --fcolor-dark: #4d4d4d;
+    --fcolor-dark2: #6b6b6b99;
+    --link-color: #3f68fc;
+    --welcome-back: #17db17cc;
+    --label-color: #8f8f8f;
+    --female-color: #ff0eaf;
+    --male-color: #3f8bfc;
+}
+
+/* .bg-image{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.bg-image img{
+    position: absolute;
+    width: 20%;
+    left: 90%;
+    bottom: -100px;
+} */
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+header h1{
+    padding: 0px 30px;
+    padding-right: 5px;
+    font-size: 26px;
+    font-family: 'Monoton', sans-serif;;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.customer-register{
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+.customer-register .container{
+    /* background: linear-gradient(45deg, green, rgb(69, 241, 69)); */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customer-register .container > div{
+    width: 50%;
+    height: 100%;
+}
+
+.customer-register .container > .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 140px;
+}
+
+.right .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'monoton';
+    font-weight: 400 ;
+}
+
+
+.customer-register .container > .right h3{
+    font-size: 20px;
+    color: var(--fcolor-dark2);
+}
+
+.customer-register .container > .right h1{
+    font-size: 36px;
+    color: var(--welcome-back);   
+}
+
+.customer-register .container >.right .wback{
+    font-size: 28px ;
+    color: var(--fcolor-dark2   ) !important;
+}
+
+.customer-register .container > .right > img{
+    width: 50%;
+}
+
+.customer-register .container > .right > img:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.right .logo img{
+    padding: 5px;
+    margin-bottom: 15px;
+    height: 50px;
+}
+
+.register-form .login-div{
+    display: none;
+}
+
+.customer-register .container > .right p, .register-form .login-div p{
+    margin-top: 10px;
+    color: var(--fcolor-dark);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.customer-register .container > .right .sub-heading{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0px 150px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.register-form .login-div p.splitter{
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.customer-register .container > .right .login{
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 2px var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.customer-register .container > .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+.register-form{
+    position: relative;
+    opacity: 1;
+    transition: 0.5s;
+    width: 100%;
+    padding: 20% 10%;
+    padding-top: 5%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.21);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.register-form .bg-graph{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.register-form .smsg{
+    border-left: solid 5px var(--primary-color);
+    padding: 5px 15px;
+    font-size: 14px;
+    color: var(--fcolor-dark2);
+    line-height: 1.1;
+}
+
+.register-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding: 20px 0px;
+    padding-top: 0px;
+    position: relative;
+}
+
+.register-form h1{
+    border-left: solid 5px var(--primary-color);
+    padding-left: 15px;
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--fcolor-dark);
+}
+
+.register-form .message-wrap{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.register-form .message
+{
+    /* opacity: 0; */
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--fcolor-dark2);
+}
+
+.register-form .message i{
+    color: #ff002b;
+    cursor: pointer;
+}
+
+.register-form form .input{
+    position: relative;
+    width: 100%;
+}
+
+.register-form form .input input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 0px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 2px solid var(--label-color);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--fcolor-dark) !important;
+    background-color: transparent !important;
+    outline: none;
+}
+
+.register-form form .checkbox-input{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.register-form form .checkbox-input label:before{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    margin-right: 10px;
+    border: 1.5px solid var(--fcolor-dark2);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.1s;
+}
+.register-form form .checkbox-input label{
+    color: var(--label-color);
+    cursor: pointer;
+}
+
+.register-form form .checkbox-input input[type=checkbox]{ 
+    display: none;
+    cursor: pointer;
+    accent-color: var(--link-color); 
+}
+
+.register-form form .checkbox-input input[type=checkbox]:checked + label:before {
+    content: "";
+    background: url(/images/checkmark.svg);
+    background-size: contain;
+    background-position: center;
+  }
+
+.register-form form .gender-input, .register-form form .dob-input{
+    padding: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--label-color);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-form form .gender-input > i{
+    color: var(--label-color);
+    margin-right: 10px;
+}
+
+.register-form form .gender-input .gender-label{
+    color: var(--label-color);
+    margin-right: 20px;
+}
+
+.gender-input.active-border{
+    border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.gender-input.active-border > i, .gender-input.active-border > .gender-label{
+    color: var(--primary-color) !important;
+}
+
+
+.register-form form .gender-input input[type=radio]{
+    display: none;
+} 
+
+.register-form form .gender-input label{
+    color: var(--label-color);
+    padding: 8px 25px;
+    border: 2px solid var(--label-color);
+    text-align: center;
+    margin-right: 20px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: url(/images/male-uncheck.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.register-form form .gender-input label:nth-of-type(2){
+    background: url(/images/female-uncheck.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.register-form form .gender-input input[type=radio]:checked + label:nth-of-type(1){
+    color: var(--male-color);
+    border: 2px solid var(--male-color);
+    background-color: #3f8bfc11;
+
+    background: url(/images/male-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.register-form form .gender-input input[type=radio]:checked + label:nth-of-type(2){
+    color: var(--female-color);
+    border: 2px solid var(--female-color);
+    background-color: #ff0eaf0d;
+
+    background: url(/images/female-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.register-form form .input input:focus{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.register-form form .input label{
+    position: relative;
+    left: 40px;
+    top: 32px;
+    color: var(--label-color);
+    transition: all 0.5s;
+}
+
+.register-form form .input i{
+    color: var(--label-color);
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    transition: all 0.5s;
+}
+
+form .input label.focused{
+    left: 0px;
+    top: 0px;
+    color: var(--primary-color);
+}
+
+form .input label.focused ~ i{
+    opacity: 0;
+}
+
+form .input:nth-child(3) input{
+    padding-left: 40px;
+}
+
+form .input:nth-child(3) input::-webkit-outer-spin-button,
+form .input:nth-child(3) input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+form .input:nth-child(3) input[type=number] {
+  -moz-appearance: textfield;
+}
+
+form .input span{
+    color: var(--fcolor-dark);
+    position: absolute;
+    left: 0px;
+    top: 33.5px;
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+form .input label.focused ~ span{
+    opacity: 1;
+}
+
+form .register-submit, .register-form .login-div .login{
+    padding: 8px 34px;
+    outline: none;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.register-form .login-div .login{
+    margin-top: 10px;
+    padding: 8px 20px;
+    margin-bottom: 5px;
+}
+
+
+form .register-submit:hover{
+    color: var(--fcolor-light);
+    border: 2px solid transparent;
+    background-color: var(--primary-color);
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+    .customer-register{
+        margin-top: 60px;
+    }
+
+    .customer-register .container{
+        flex-direction: column;
+    }
+    .customer-register .container > div{
+        width: 100%;
+    }
+
+    .customer-register .container > .right{
+        display: none;
+    }
+
+    .register-form h1{
+        font-size: 24px;
+    }
+
+    .register-form .login-div{
+        display: block;
+    }
+
+
+}

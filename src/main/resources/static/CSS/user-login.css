@@ -1,0 +1,327 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins';
+
+}
+
+:root{
+    --primary-color: #00d000;
+    --dark-primary: #00aa00;
+    --light-primary: #00ff00;   
+    --bg-color: #00ff0009;
+    --fcolor-light: rgb(245, 245, 245);
+    --fcolor-dark: rgb(77, 77, 77);
+    --fcolor-dark2: rgba(107, 107, 107, 0.6);
+    --link-color: rgb(63, 104, 252);
+    --welcome-back: rgba(23, 219, 23, 0.8);
+}
+
+/* .bg-image{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.bg-image img{
+    position: absolute;
+    width: 20%;
+    left: 90%;
+    bottom: -100px;
+} */
+
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+header h1{
+    padding: 0px 30px;
+    padding-right: 5px;
+    font-size: 26px;
+    font-family: 'Monoton', sans-serif;;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.admin-login{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+.admin-login .container{
+    /* background: linear-gradient(45deg, green, rgb(69, 241, 69)); */
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin-login .container > div{
+    width: 50%;
+    height: 100%;
+}
+
+.admin-login .container > .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-login .container > .right h3{
+    font-size: 20px;
+    color: var(--fcolor-dark2);
+}
+
+.admin-login .container > .right h1{
+    font-size: 36px;
+    color: var(--welcome-back);
+}
+
+.admin-login .container > .right img{
+    width: 80%;
+}
+
+.admin-login .container > .right img:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.login-form .register-div{
+    display: none;
+}
+
+.admin-login .container > .right p, .login-form .register-div p{
+    margin-top: 10px;
+    color: var(--fcolor-dark);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.login-form .register-div p.splitter{
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.admin-login .container > .right .register{
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: solid 2px var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.admin-login .container > .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+.login-form{
+    position: relative;
+    opacity: 1;
+    transition: 0.5s;
+    width: 100%;
+    padding: 20% 10%;
+    padding-top: 10%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.21);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.login-form .bg-graph{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.login-form .smsg{
+    border-left: solid 5px var(--primary-color);
+    padding: 5px 15px;
+    font-size: 14px;
+    color: var(--fcolor-dark2);
+    line-height: 1.1;
+}
+
+.login-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding: 20px 0px;
+    padding-top: 0px;
+    position: relative;
+}
+
+.login-form h1{
+    border-left: solid 5px var(--primary-color);
+    padding-left: 15px;
+    font-size: 28px;
+    line-height: 1.3;
+    color: var(--fcolor-dark);
+}
+
+.login-form .message-wrap{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.login-form .message
+{
+    /* opacity: 0; */
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--fcolor-dark2);
+}
+
+.login-form .message i{
+    color: #ff002b;
+    cursor: pointer;
+}
+
+.login-form form .input{
+    position: relative;
+    width: 100%;
+}
+
+.login-form form .input input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 0px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 2px solid #8f8f8f;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--fcolor-dark) !important;
+    background-color: transparent !important;
+    outline: none;
+}
+
+.login-form form .input input:focus{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.login-form form .input label{
+    position: relative;
+    left: 40px;
+    top: 32px;
+    color: #8f8f8f;
+    transition: all 0.5s;
+}
+
+.login-form form .input i{
+    color: #8f8f8f;
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    transition: all 0.5s;
+}
+
+form .input label.focused{
+    left: 0px;
+    top: 0px;
+    color: var(--primary-color);
+}
+
+form .input label.focused ~ i{
+    opacity: 0;
+}
+
+.login-form .forgot-link{
+    text-decoration: none;
+    margin-top: 20px;
+    color: var(--link-color);
+}
+
+form .login-submit, .login-form .register-div .register{
+    padding: 8px 34px;
+    outline: none;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.login-form .register-div .register{
+    margin-top: 10px;
+    padding: 8px 20px;
+    margin-bottom: 5px;
+}
+
+
+form .login-submit:hover{
+    color: var(--fcolor-light);
+    border: 2px solid transparent;
+    background-color: var(--primary-color);
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+    .admin-login{
+        margin-top: 60px;
+    }
+
+    .admin-login .container{
+        flex-direction: column;
+    }
+    .admin-login .container > div{
+        width: 100%;
+    }
+
+    .admin-login .container > .right{
+        display: none;
+    }
+
+    .login-form h1{
+        font-size: 24px;
+    }
+
+    .login-form .register-div{
+        display: block;
+    }
+
+
+}
